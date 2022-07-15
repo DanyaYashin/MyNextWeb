@@ -15,9 +15,6 @@ export default function CV() {
       secondposition = 1
     }
   }
-  setFirstposition(firstposition)
-  setSecondposition(secondposition)
-}
 
 useEffect(() => {
    window.addEventListener('scroll', handleScroll, { passive: true });
@@ -25,7 +22,7 @@ useEffect(() => {
 
 return(
   <div>
-    <div style={{opacity: ${(secondposition)}}}>First</div>
-    <div style={{opacity: ${(firstposition)}}}>Second</div>
+    <div style={{opacity:{firstposition}}}>First</div>
   </div>
 )
+}
