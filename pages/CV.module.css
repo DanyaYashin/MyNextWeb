@@ -1,0 +1,19 @@
+.body{
+  height: 1500px;
+}
+.alltags{
+  position: fixed;
+  border: 1px double black;
+  width:200px;
+  height: 200px;
+  left: 75vw;
+  top: 100px;
+}
+.first{
+  padding-left: 30px;
+  padding-top: 30px
+}
+.second{
+  writing-mode: vertical-rl;
+  padding-left: 40px;
+}
