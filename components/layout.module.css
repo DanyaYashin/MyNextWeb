@@ -1,15 +1,63 @@
-.container {
-  max-width: 36rem;
-  padding: 0 1rem;
-  margin: 3rem auto 6rem;
+.container{
+	height: 1500px;
 }
 
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.menu{
+	top: 30px;
+	text-align: center;
+	position: fixed;
+	z-index: 1;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	overflow: hidden;
+	background-color: black;
 }
 
-.backToHome {
-  margin: 3rem 0 0;
+
+
+.disc1{
+	top: 30px;
+	text-align: center;
+	position: fixed;
+	z-index: 0;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	overflow: hidden;
+	background-color: blue;
+}
+.disc11{
+	top: 30px;
+	text-align: center;
+	position: fixed;
+	z-index: 0;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	overflow: hidden;
+	background-color: blue;
+}
+
+.disc12{
+	top: 30px;
+	text-align: center;
+	position: fixed;
+	z-index: 0;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	overflow: hidden;
+	background-color: blue;
+}
+.disc22{
+	top: 30px;
+	text-align: center;
+	position: fixed;
+	z-index: 0;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	overflow: hidden;
+	background-color: grey;
 }
