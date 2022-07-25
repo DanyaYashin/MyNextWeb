@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import Layout, { siteTitle } from '../components/layout';
+import Layout from '../components/layout';
 import styles from './CV.module.css';
 
 
@@ -26,11 +26,13 @@ useEffect(() => {
  });
 
 return(
+  <Layout>
   <div className={styles.body}>
     <div className={styles.alltags}>
       <div className={styles.first} style={{opacity:firstposition}}>First</div>
       <div className={styles.second} style={{opacity:secondposition}}>Second</div>
     </div>
   </div>
+  </Layout>
 )
 }
