@@ -2,6 +2,7 @@ import Head from 'next/head';
 import styles from './layout.module.css';
 import Link from 'next/link';
 import React, { useState, useEffect } from "react"
+import { motion } from 'framer-motion';
 
 
 export default function Layout(props) {
@@ -32,21 +33,27 @@ export default function Layout(props) {
 	 setMenuDisc3(styles.disc3)
  }
   return (
+		<motion.div initial="exit" animate="enter" exit="exit">
     <div className={styles.container}>
-	       <a className={menuDisc3}>
+	       <a className={menuDisc3} onClick={closeMenu}>
 		       <div>Портфолио</div>
          </a>
-	       <a className={menuDisc2}>
+				 <Link href="/">
+	       <a className={menuDisc2} onClick={closeMenu}>
 		       <div>Контакты</div>
 	       </a>
-	       <a className={menuDisc1}>
+				 </Link>
+				 <Link href="/CV">
+	       <a className={menuDisc1} onClick={closeMenu}>
 		       <div>CV</div>
 	       </a>
+				 </Link>
 	       <a className={menuDisc0} onClick={toggleMenu}>
 	       </a>
 				 <div className={styles.children}>
 				 		{props.children}
          </div>
     </div>
+		</motion.div>
   );
 }
