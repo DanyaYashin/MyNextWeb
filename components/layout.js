@@ -3,6 +3,7 @@ import styles from './layout.module.css';
 import Link from 'next/link';
 import React, { useState, useEffect } from "react"
 import { motion } from 'framer-motion';
+import cvStyles from '../pages/CV.module.css';
 
 
 export default function Layout(props) {
@@ -11,6 +12,26 @@ export default function Layout(props) {
 	const [menuDisc1, setMenuDisc1] = React.useState(styles.disc1)
 	const [menuDisc2, setMenuDisc2] = React.useState(styles.disc2)
 	const [menuDisc3, setMenuDisc3] = React.useState(styles.disc3)
+
+	const [switchActive, setSwitchActive] = React.useState(false)
+	const [switchCss, setSwitchCss] = React.useState(styles.switch)
+	const [backSwitchCss, setBackSwitchCss] = React.useState(styles.backSwitch)
+	const [text1Css, setText1Css] = React.useState(cvStyles.text1)
+
+	const switchClick = () => {
+		setSwitchActive(!switchActive);
+    if (switchActive){
+			setSwitchCss(styles.switch)
+			setBackSwitchCss(styles.backSwitch)
+			setText1Css(cvStyles.text1)
+    }
+    else {
+			setSwitchCss(styles.switch0)
+			setBackSwitchCss(styles.backSwitch0)
+			setText1Css(cvStyles.BackText1)
+    }
+  }
+
 	const toggleMenu = () => {
     setMenuActive(!menuActive);
     if (menuActive){
@@ -32,27 +53,32 @@ export default function Layout(props) {
 	 setMenuDisc2(styles.disc2)
 	 setMenuDisc3(styles.disc3)
  }
+
   return (
 		<motion.div initial="exit" animate="enter" exit="exit">
     <div className={styles.container}>
-	       <a className={menuDisc3} onClick={closeMenu}>
-		       <div>Портфолио</div>
+	       <a className={menuDisc3}>
+		       Портфолио
          </a>
 				 <Link href="/">
-	       <a className={menuDisc2} onClick={closeMenu}>
-		       <div>Контакты</div>
+	       <a className={menuDisc2}>
+		       Контакты
 	       </a>
 				 </Link>
 				 <Link href="/CV">
-	       <a className={menuDisc1} onClick={closeMenu}>
-		       <div>CV</div>
+	       <a className={menuDisc1}>
+		       CV
 	       </a>
 				 </Link>
 	       <a className={menuDisc0} onClick={toggleMenu}>
 	       </a>
+				 <a className={backSwitchCss} onClick={switchClick}/>
+				 <a className={switchCss} onClick={switchClick}/>
+
 				 <div className={styles.children}>
 				 		{props.children}
          </div>
+
     </div>
 		</motion.div>
   );

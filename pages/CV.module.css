@@ -1,5 +1,5 @@
-.body{
-  height: 1500px;
+.Alltags{
+
 }
 .alltags{
   position: fixed;
@@ -9,11 +9,138 @@
   left: 75vw;
   top: 100px;
 }
-.first{
-  padding-left: 30px;
-  padding-top: 30px
+
+.tagpy{
+  color: #BA55D3;
+  font-size: 22px;
+  position: absolute;
+  padding-left: 55px;
+  padding-top: 26px;
+  transition: 0.5s;
 }
-.second{
+.tagpy0{
+  color: #BA55D3;
+  font-size: 22px;
+  position: absolute;
+  padding-left: 45px;
+  padding-top: 26px;
+  opacity: 0;
+}
+.tagdjng{
+  font-size: 20px;
+  position: absolute;
   writing-mode: vertical-rl;
-  padding-left: 40px;
+  padding-left: 80px;
+  padding-top: 55px;
+  transition: 0.5s;
+}
+.tagdjng0{
+  font-size: 20px;
+  position: absolute;
+  writing-mode: vertical-rl;
+  padding-left: 80px;
+  padding-top: 65px;
+  opacity: 0;
+}
+.tagjs{
+  color: #800080;
+  font-size: 30px;
+  position: absolute;
+  padding-left: 100px;
+  padding-top: 42px;
+  transition: 0.5s;
+}
+.tagjs0{
+  color: #800080;
+  font-size: 30px;
+  position: absolute;
+  padding-left: 110px;
+  padding-top: 42px;
+  opacity: 0;
+}
+.tagrct{
+  color: #DDA0DD;
+  position: absolute;
+  writing-mode: vertical-lr;
+  padding-left: 93px;
+  padding-top: 80px;
+  transition: 0.5s;
+}
+.tagrct0{
+  color: #DDA0DD;
+  position: absolute;
+  writing-mode: vertical-lr;
+  padding-left: 93px;
+  padding-top: 90px;
+  opacity: 0;
+}
+.tagknv{
+  color: #7B68EE;
+  position: absolute;
+  padding-left: 35px;
+  padding-top: 45px;
+  transition: 0.5s;
+}
+.tagknv0{
+  color: #7B68EE;
+  position: absolute;
+  padding-left: 25px;
+  padding-top: 45px;
+  opacity: 0;
+}
+.taggtsb{
+  color: #FF00FF;
+  font-size: 22px;
+  position: absolute;
+  padding-left: 20px;
+  padding-top: 58px;
+  transition: 0.5s;
+}
+.taggtsb0{
+  color: #FF00FF;
+  font-size: 22px;
+  position: absolute;
+  padding-left: 20px;
+  padding-top: 68px;
+  opacity: 0;
+}
+.tagnxt{
+  color: #663399;
+  font-size: 20px;
+  position: absolute;
+  padding-left: 37px;
+  padding-top: 78px;
+  transition: 0.5s;
+}
+.tagnxt0{
+  color: #663399;
+  font-size: 20px;
+  position: absolute;
+  padding-left: 27px;
+  padding-top: 88px;
+  opacity: 0;
+}
+
+
+
+
+.allText{
+  z-index: 1;
+  font-family: 'Cormorant SC', serif;
+}
+.text1{
+  width: 30vw;
+  margin-left: 30vw;
+  margin-top: 100px;
+}
+.backText1{
+  width: 30vw;
+  margin-left: 30vw;
+  margin-top: 100px;
+  background-color: #808000;
+}
+.text2{
+  width: 30vw;
+  margin-left: 30vw;
+  margin-top: 100px;
 }
