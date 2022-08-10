@@ -3,13 +3,14 @@ import styles from './CV.module.css';
 import { motion } from 'framer-motion';
 import  CVtext1 from '../components/CVtext'
 import  CVtext2 from '../components/CVtext'
-import {text1Css} from '../components/layout';
+import Layout, { allTextCss } from '../components/layout';
 
 let easingText = [0.16, 1, 0.3, 1];
 let easingTags = [0, 0.55, 0.45, 1];
 
 const textVariants = {
-  exit: { x: -300, opacity: 0, transition: { duration: 1, ease: easingText } },
+  initial: { x: -300, opacity: 0, transition: { duration: 1, ease: easingText } },
+  exit: { x: 300, opacity: 0, transition: { duration: 1, ease: easingText } },
   enter: {
     x: 0,
     opacity: 1,
@@ -17,7 +18,8 @@ const textVariants = {
   }
 };
 const tagsVariants = {
-  exit: { x: 100, opacity: 0, transition: { duration: 0.6, ease: easingTags } },
+  initial: { x: 100, opacity: 0, transition: { duration: 0.6, ease: easingTags } },
+  exit: { x: 300, opacity: 0, transition: { duration: 0.6, ease: easingTags } },
   enter: {
     x: 0,
     opacity: 1,
@@ -63,7 +65,7 @@ export default function CV() {
   });
 
   return(
-  <motion.div initial="exit" animate="enter" exit="exit">
+  <motion.div initial="initial" animate="enter" exit="exit">
     <div className={styles.allText}>
     <motion.div variants={textVariants}>
       <div className={styles.text1}>

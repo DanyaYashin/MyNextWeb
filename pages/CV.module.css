@@ -3,7 +3,7 @@
 }
 .alltags{
   position: fixed;
-  border: 1px double black;
+  border: 1px double #BA55D3;
   width:200px;
   height: 200px;
   left: 75vw;
@@ -125,22 +125,25 @@
 
 
 .allText{
+  z-index: -1;
+  font-family: 'Cormorant SC', serif;
+  position: absolute;
+  width: 30vw;
+  left: 30vw;
+}
+.backAllText{
   z-index: 1;
   font-family: 'Cormorant SC', serif;
+  position: absolute;
+  width: 30vw;
+  left: 30vw;
+  background-color: #808000;
 }
 .text1{
   width: 30vw;
-  margin-left: 30vw;
   margin-top: 100px;
-}
-.backText1{
-  width: 30vw;
-  margin-left: 30vw;
-  margin-top: 100px;
-  background-color: #808000;
 }
 .text2{
   width: 30vw;
-  margin-left: 30vw;
   margin-top: 100px;
 }
