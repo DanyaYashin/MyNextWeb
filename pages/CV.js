@@ -3,7 +3,7 @@ import styles from './CV.module.css';
 import { motion } from 'framer-motion';
 import  CVtext1 from '../components/CVtext'
 import  CVtext2 from '../components/CVtext'
-import Layout, { allTextCss } from '../components/layout';
+import Layout, {menuActive,allTextCss} from '../components/layout';
 
 let easingText = [0.16, 1, 0.3, 1];
 let easingTags = [0, 0.55, 0.45, 1];
@@ -66,11 +66,14 @@ export default function CV() {
 
   return(
   <motion.div initial="initial" animate="enter" exit="exit">
-    <div className={styles.allText}>
+
+    <div className={allTextCss}>
     <motion.div variants={textVariants}>
       <div className={styles.text1}>
+      {allTextCss}
         <CVtext1/>
       </div>
+      <p></p>
       <div className={styles.text2}>
         <CVtext2/>
       </div>

@@ -20,19 +20,19 @@ export default function Layout(props) {
 	const [switchActive, setSwitchActive] = React.useState(false)
 	const [switchCss, setSwitchCss] = React.useState(styles.switch)
 	const [backSwitchCss, setBackSwitchCss] = React.useState(styles.backSwitch)
-	const [allTextCss, setAllTextCss] = React.useState(cvStyles.allText)
+	const [allTextCss, setAllTextCss] = React.useState(styles.allText)
 
 	const switchClick = () => {
 		setSwitchActive(!switchActive);
     if (switchActive){
 			setSwitchCss(styles.switch)
 			setBackSwitchCss(styles.backSwitch)
-			setAllTextCss(cvStyles.allTtext)
+			setAllTextCss(styles.allTtext)
     }
     else {
 			setSwitchCss(styles.switch0)
 			setBackSwitchCss(styles.backSwitch0)
-			setAllTextCss(cvStyles.BackAllText)
+			setAllTextCss(styles.backAllText)
     }
   }
 
@@ -91,9 +91,11 @@ export default function Layout(props) {
 			<a className={backSwitchCss} onClick={switchClick}/>
 			<a className={switchCss} onClick={switchClick}/>
 		</div>
+		<div className = {allTextCss}>
 		<div className={styles.children}>
 			{props.children}
     </div>
+		</div>
 		</motion.div>
   );
 }
