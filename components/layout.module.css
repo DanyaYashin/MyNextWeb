@@ -216,19 +216,3 @@
 	background-color: 	#FFFFFF;
 	transition: 0.3s;
 }
-
-.allText{
-  z-index: -1;
-  font-family: 'Cormorant SC', serif;
-  position: absolute;
-  width: 30vw;
-  left: 30vw;
-}
-.backAllText{
-  z-index: 1;
-  font-family: 'Cormorant SC', serif;
-  position: absolute;
-  width: 30vw;
-  left: 30vw;
-  background-color: #808000;
-}

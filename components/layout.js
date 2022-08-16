@@ -6,7 +6,9 @@ import { motion } from 'framer-motion';
 import cvStyles from '../pages/CV.module.css';
 
 
+export const TextContext = React.createContext(null)
 export default function Layout(props) {
+
 	const [menuActive, setMenuActive] = React.useState(false)
 	const [menuDisc0, setMenuDisc0] = React.useState(styles.menu)
 	const [menuDisc1, setMenuDisc1] = React.useState(styles.disc1)
@@ -20,19 +22,20 @@ export default function Layout(props) {
 	const [switchActive, setSwitchActive] = React.useState(false)
 	const [switchCss, setSwitchCss] = React.useState(styles.switch)
 	const [backSwitchCss, setBackSwitchCss] = React.useState(styles.backSwitch)
-	const [allTextCss, setAllTextCss] = React.useState(styles.allText)
+	const [allTextCss, setAllTextCss] = React.useState(cvStyles.allText)
+
 
 	const switchClick = () => {
 		setSwitchActive(!switchActive);
     if (switchActive){
 			setSwitchCss(styles.switch)
 			setBackSwitchCss(styles.backSwitch)
-			setAllTextCss(styles.allTtext)
+			setAllTextCss(cvStyles.allText)
     }
     else {
 			setSwitchCss(styles.switch0)
 			setBackSwitchCss(styles.backSwitch0)
-			setAllTextCss(styles.backAllText)
+			setAllTextCss(cvStyles.backAllText)
     }
   }
 
@@ -91,11 +94,11 @@ export default function Layout(props) {
 			<a className={backSwitchCss} onClick={switchClick}/>
 			<a className={switchCss} onClick={switchClick}/>
 		</div>
-		<div className = {allTextCss}>
+		<TextContext.Provider value={allTextCss}>
 		<div className={styles.children}>
 			{props.children}
     </div>
-		</div>
+		</TextContext.Provider>
 		</motion.div>
   );
 }

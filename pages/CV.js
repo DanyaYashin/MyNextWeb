@@ -3,7 +3,8 @@ import styles from './CV.module.css';
 import { motion } from 'framer-motion';
 import  CVtext1 from '../components/CVtext'
 import  CVtext2 from '../components/CVtext'
-import Layout, {menuActive,allTextCss} from '../components/layout';
+import { TextContext } from '../components/layout.js'
+
 
 let easingText = [0.16, 1, 0.3, 1];
 let easingTags = [0, 0.55, 0.45, 1];
@@ -28,6 +29,7 @@ const tagsVariants = {
 };
 
 export default function CV() {
+  const text = React.useContext(TextContext)
   const [tagPython, setTagPython] = React.useState(styles.tagpy0)
   const [tagDjango, setTagDjango] = React.useState(styles.tagdjng0)
   const [tagJS, setTagJS] = React.useState(styles.tagjs0)
@@ -65,12 +67,12 @@ export default function CV() {
   });
 
   return(
+
   <motion.div initial="initial" animate="enter" exit="exit">
 
-    <div className={allTextCss}>
+    <div className={text}>
     <motion.div variants={textVariants}>
       <div className={styles.text1}>
-      {allTextCss}
         <CVtext1/>
       </div>
       <p></p>
@@ -93,5 +95,6 @@ export default function CV() {
     </motion.div>
     </div>
   </motion.div>
+
   );
 }
