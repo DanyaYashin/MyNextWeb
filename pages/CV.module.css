@@ -2,12 +2,13 @@
 
 }
 .alltags{
+  z-index: -1;
   position: fixed;
   border: 1px double #BA55D3;
   width:200px;
   height: 200px;
-  left: 75vw;
   top: 100px;
+  margin-left: 50px;
 }
 
 .tagpy{
@@ -120,30 +121,99 @@
   padding-top: 88px;
   opacity: 0;
 }
-
+.backTags{
+  z-index: 1;
+  position: fixed;
+  background-color: rgba(0, 225, 215, 0.9);
+  width:600px;
+  height: 57vh;
+  transition: 0.3s;
+  font-family: 'Roboto Mono', monospace;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 15vh;
+  overflow: hidden;
+}
+.hideBackTags{
+  z-index: -1;
+  position: fixed;
+  background-color: rgba(0, 225, 215, 0.9);
+  width: 600px;
+  height: 57vh;
+  opacity: 0;
+  transition: 0.3s;
+  font-family: 'Roboto Mono', monospace;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 15vh;
+  overflow: hidden;
+}
+.tagsPosition{
+  position: fixed;
+  left: 64vw;
+}
+.supBackTags{
+  width: 30vw;
+  overflow: hidden;
+}
 
 
 
 .allText{
-  z-index: -1;
-  font-family: 'Cormorant SC', serif;
-  position: absolute;
-  width: 30vw;
-  left: 30vw;
-}
-.backAllText{
   z-index: 1;
   font-family: 'Cormorant SC', serif;
   position: absolute;
-  width: 30vw;
+  width: 33vw;
   left: 30vw;
-  background-color: #808000;
+  transition: 0.3s;
+  margin-top: 50px;
+  display: table-column;
+  height: 420vh;
 }
-.text1{
-  width: 30vw;
-  margin-top: 100px;
+.backAllText{
+  z-index: -1;
+  font-family: 'Cormorant SC', serif;
+  position: absolute;
+  width: 33vw;
+  left: 30vw;
+  transition: 0.3s;
+  margin-top: 50px;
+  opacity: 0.1;
+  height: 420vh;
 }
-.text2{
-  width: 30vw;
-  margin-top: 100px;
+.text1, .text2{
+  width: 25vw;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.3s;
+}
+.backText{
+  z-index: 1;
+  font-family: 'Roboto Mono', monospace;
+  position: fixed;
+  width: 33vw;
+  left: 30vw;
+  transition: 0.3s;
+  background-color: rgba(0, 125, 215, 0.5);
+  height: 100vh;
+}
+.hideBackText{
+  z-index: -1;
+  font-family: 'Roboto Mono', monospace;
+  position: fixed;
+  width: 33vw;
+  left: 30vw;
+  transition: 0.3s;
+  opacity: 0;
+  height: 100vh;
+}
+.supBackText{
+  position: fixed;
+  width: 33vw;
+  margin-top: 15vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  overflow: hidden;
+  transition: 0.3s;
 }

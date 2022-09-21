@@ -8,7 +8,7 @@
 	left: 8px;
 	text-align: center;
 	position: fixed;
-	z-index: 1;
+	z-index: 4;
 	width: 84px;
 	height: 84px;
 	border-radius: 30%;
@@ -23,7 +23,7 @@
 	left: 10px;
 	text-align: center;
 	position: fixed;
-	z-index: 1;
+	z-index: 4;
 	width: 80px;
 	height: 80px;
 	border-radius: 30%;
@@ -45,7 +45,7 @@
 	left: 10px;
 	text-align: center;
 	position: fixed;
-	z-index: 0;
+	z-index: 3;
 	width: 80px;
 	height: 80px;
 	border-radius: 30%;
@@ -60,7 +60,7 @@
 	left: -30px;
 	text-align: center;
 	position: fixed;
-	z-index: 0;
+	z-index: 3;
 	width: 160px;
 	height: 160px;
 	border-radius: 30%;
@@ -88,7 +88,7 @@
 	left: 10px;
 	text-align: center;
 	position: fixed;
-	z-index: 0;
+	z-index: 3;
 	width: 80px;
 	height: 80px;
 	border-radius: 30%;
@@ -104,7 +104,7 @@
 	left: -90px;
 	text-align: center;
 	position: fixed;
-	z-index: 0;
+	z-index: 3;
 	width: 280px;
 	height: 280px;
 	border-radius: 35%;
@@ -132,7 +132,7 @@
 	left: 10px;
 	text-align: center;
 	position: fixed;
-	z-index: 0;
+	z-index: 3;
 	width: 80px;
 	height: 80px;
 	border-radius: 30%;
@@ -147,7 +147,7 @@
 	left: -150px;
 	text-align: center;
 	position: fixed;
-	z-index: 0;
+	z-index: 3;
 	width: 400px;
 	height: 400px;
 	border-radius: 40%;
@@ -168,11 +168,39 @@
 	transform: rotate(-395deg);
 	color: #C71585;
 }
+.backMenu{
+	position: fixed;
+	z-index: 2;
+	width: 29vw;
+	height: 74vh;
+	margin-top: -17vh;
+	font-family: 'Roboto Mono', monospace;
+	background-color: rgba(200, 125, 315, 0.9);
+	overflow: hidden;
+}
+.hideBackMenu{
+	position: fixed;
+	z-index: 2;
+	width: 29vw;
+	height: 74vh;
+	margin-top: -17vh;
+	font-family: 'Roboto Mono', monospace;
+	background-color: rgba(200, 125, 315, 0.9);
+	overflow: hidden;
+	opacity: 0;
+}
+.supBackMenu{
+	position: absolute;
+	padding: 40px;
+	bottom: 0px;
+}
+
 
 
 .switchButton{
 	margin-top: 95vh;
 	position: fixed;
+	z-index: 2;
 }
 .backSwitch{
 	position: absolute;
@@ -215,4 +243,31 @@
 	height: 17px;
 	background-color: 	#FFFFFF;
 	transition: 0.3s;
+}
+.hideBackButton{
+	margin-top: 59vh;
+	position: fixed;
+	z-index: 1;
+	opacity: 0;
+	font-family: 'Roboto Mono', monospace;
+	background-color: rgba(100, 125, 315, 0.5);
+	width: 29vw;
+	height: 50vh;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 40px;
+	overflow: hidden;
+}
+.backButton{
+	margin-top: 59vh;
+	position: fixed;
+	z-index: 1;
+	font-family: 'Roboto Mono', monospace;
+	background-color: rgba(100, 125, 315, 0.5);
+	width: 29vw;
+	height: 50vh;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 40px;
+	overflow: hidden;
 }

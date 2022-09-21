@@ -5,8 +5,23 @@ import React, { useState, useEffect } from "react"
 import { motion } from 'framer-motion';
 import cvStyles from '../pages/CV.module.css';
 
+let easingSwitch = [0.16, 1, 0.3, 1];
+
+const switchVariants = {
+  initial: { y: 100, opacity: 0, transition: { duration: 0.6, ease: easingSwitch } },
+  exit: { y: 300, opacity: 0, transition: { duration: 0.6, ease: easingSwitch } },
+  enter: {
+    x: 0,
+    opacity: 1,
+    transition: {delay: 0.1, duration: 0.9, ease: easingSwitch }
+  }
+};
+
 
 export const TextContext = React.createContext(null)
+export const BackTextContext = React.createContext(null)
+export const BackTagsContext = React.createContext(null)
+export const BackAnimatedContext = React.createContext(null)
 export default function Layout(props) {
 
 	const [menuActive, setMenuActive] = React.useState(false)
@@ -23,6 +38,11 @@ export default function Layout(props) {
 	const [switchCss, setSwitchCss] = React.useState(styles.switch)
 	const [backSwitchCss, setBackSwitchCss] = React.useState(styles.backSwitch)
 	const [allTextCss, setAllTextCss] = React.useState(cvStyles.allText)
+	const [backTextCss, setBackTextCss] = React.useState(cvStyles.hideBackText)
+	const [backTagsCss, setBackTagsCss] = React.useState(cvStyles.hideBackTags)
+	const [buttonContext, setButtonContext] = React.useState(styles.hideBackButton)
+	const [backMenu, setBackMenu] = React.useState(styles.hideBackMenu)
+	const [backAnimated, setBackAnimated] = React.useState(300)
 
 
 	const switchClick = () => {
@@ -31,11 +51,21 @@ export default function Layout(props) {
 			setSwitchCss(styles.switch)
 			setBackSwitchCss(styles.backSwitch)
 			setAllTextCss(cvStyles.allText)
+			setBackTextCss(cvStyles.hideBackText)
+			setBackTagsCss(cvStyles.hideBackTags)
+			setButtonContext(styles.hideBackButton)
+			setBackMenu(styles.hideBackMenu)
+			setBackAnimated(500)
     }
     else {
 			setSwitchCss(styles.switch0)
 			setBackSwitchCss(styles.backSwitch0)
 			setAllTextCss(cvStyles.backAllText)
+			setBackTextCss(cvStyles.backText)
+			setBackTagsCss(cvStyles.backTags)
+			setButtonContext(styles.backButton)
+			setBackMenu(styles.backMenu)
+			setBackAnimated(0)
     }
   }
 
@@ -68,8 +98,15 @@ export default function Layout(props) {
  }
 
   return (
-		<motion.div initial="exit" animate="enter" exit="exit">
-		<div className={styles.allDiscMenu} onMouseLeave={closeMenu}>
+		<motion.div initial="initial" animate="enter" exit="exit">
+		<motion.div className={backMenu} animate={{
+			y: -backAnimated
+		}}>
+			<div className={styles.supBackMenu}>
+				Безусловно, сплочённость команды профессионалов требует от нас анализа поставленных обществом задач.
+			</div>
+		</motion.div>
+		<div className={styles.allDiscMenu}>
 			<div className={supportDisc3}/>
 			<Link href="/gallery">
 	    	<a className={menuDisc3}>
@@ -90,14 +127,25 @@ export default function Layout(props) {
 			</Link>
 	    <a className={menuDisc0} onClick={toggleMenu}/>
 		</div>
+		<motion.div className={buttonContext} animate={{
+			y: backAnimated
+		}}>
+			И нет сомнений, что представители современных социальных резервов призваны к ответу.
+		</motion.div>
 		<div className={styles.switchButton}>
 			<a className={backSwitchCss} onClick={switchClick}/>
 			<a className={switchCss} onClick={switchClick}/>
 		</div>
 		<TextContext.Provider value={allTextCss}>
+		<BackTextContext.Provider value={backTextCss}>
+		<BackTagsContext.Provider value={backTagsCss}>
+		<BackAnimatedContext.Provider value={backTagsCss}>
 		<div className={styles.children}>
 			{props.children}
     </div>
+		</BackAnimatedContext.Provider>
+		</BackTagsContext.Provider>
+		</BackTextContext.Provider>
 		</TextContext.Provider>
 		</motion.div>
   );

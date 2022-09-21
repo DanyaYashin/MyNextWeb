@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anek+Bangla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
 html,
 body {
   padding: 0;
@@ -11,7 +12,6 @@ body {
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
-
 }
 
 
@@ -26,7 +26,4 @@ a {
 }
 
 img {
-}
-::-webkit-scrollbar {
-  display: block;
 }
