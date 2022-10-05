@@ -171,7 +171,7 @@
 .backMenu{
 	position: fixed;
 	z-index: 2;
-	width: 29vw;
+	width: 24vw;
 	height: 74vh;
 	margin-top: -17vh;
 	font-family: 'Roboto Mono', monospace;
@@ -181,7 +181,7 @@
 .hideBackMenu{
 	position: fixed;
 	z-index: 2;
-	width: 29vw;
+	width: 24vw;
 	height: 74vh;
 	margin-top: -17vh;
 	font-family: 'Roboto Mono', monospace;
@@ -251,7 +251,7 @@
 	opacity: 0;
 	font-family: 'Roboto Mono', monospace;
 	background-color: rgba(100, 125, 315, 0.5);
-	width: 29vw;
+	width: 24vw;
 	height: 50vh;
 	padding-left: 40px;
 	padding-right: 40px;
@@ -264,7 +264,7 @@
 	z-index: 1;
 	font-family: 'Roboto Mono', monospace;
 	background-color: rgba(100, 125, 315, 0.5);
-	width: 29vw;
+	width: 24vw;
 	height: 50vh;
 	padding-left: 40px;
 	padding-right: 40px;

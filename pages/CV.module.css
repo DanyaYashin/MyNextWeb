@@ -150,7 +150,7 @@
 }
 .tagsPosition{
   position: fixed;
-  left: 64vw;
+  left: 66vw;
 }
 .supBackTags{
   width: 30vw;
@@ -163,8 +163,8 @@
   z-index: 1;
   font-family: 'Cormorant SC', serif;
   position: absolute;
-  width: 33vw;
-  left: 30vw;
+  width: 40vw;
+  left: 25vw;
   transition: 0.3s;
   margin-top: 50px;
   display: table-column;
@@ -174,26 +174,28 @@
   z-index: -1;
   font-family: 'Cormorant SC', serif;
   position: absolute;
-  width: 33vw;
-  left: 30vw;
+  width: 40vw;
+  left: 25vw;
   transition: 0.3s;
   margin-top: 50px;
   opacity: 0.1;
   height: 420vh;
 }
-.text1, .text2{
-  width: 25vw;
-  margin-top: 50px;
+.text1, .text2, .text3{
+  width: 35vw;
+  height: 100vh;
+  margin-top: 150px;
   margin-left: auto;
   margin-right: auto;
   transition: 0.3s;
 }
+
 .backText{
   z-index: 1;
   font-family: 'Roboto Mono', monospace;
   position: fixed;
-  width: 33vw;
-  left: 30vw;
+  width: 40vw;
+  left: 25vw;
   transition: 0.3s;
   background-color: rgba(0, 125, 215, 0.5);
   height: 100vh;
@@ -202,15 +204,15 @@
   z-index: -1;
   font-family: 'Roboto Mono', monospace;
   position: fixed;
-  width: 33vw;
-  left: 30vw;
+  width: 40vw;
+  left: 25vw;
   transition: 0.3s;
   opacity: 0;
   height: 100vh;
 }
 .supBackText{
   position: fixed;
-  width: 33vw;
+  width: 40vw;
   margin-top: 15vh;
   padding-left: 5vw;
   padding-right: 5vw;

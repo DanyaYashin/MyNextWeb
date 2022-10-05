@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import styles from './CV.module.css';
 import { motion } from 'framer-motion';
 import  CVtext1 from '../components/CVtext'
-import  CVtext2 from '../components/CVtext'
+import  CVtext2 from '../components/CVtext2'
+import  CVtext3 from '../components/CVtext3'
 import { TextContext, BackTextContext, BackTagsContext, BackAnimatedContext } from '../components/layout.js'
 
 
@@ -40,9 +41,11 @@ export default function CV() {
   const [tagKonva, setTagKonva] = React.useState(styles.tagknv0)
   const [tagGatsby, setTagGatsby] = React.useState(styles.taggtsb0)
   const [tagNext, setTagNext] = React.useState(styles.tagnxt0)
+  const [scrollCV, setScrollCV] = React.useState()
 
   const handleScroll = () => {
     let position = (window.pageYOffset);
+    let height = (window.innerHeight);
     if (position > 200){
       setTagPython(styles.tagpy)
     }
@@ -85,6 +88,25 @@ export default function CV() {
     else{
       setTagNext(styles.tagnxt0)
     }
+    if (position < height*0.7){
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      })
+    }
+    for (var i = 0; i < 3; i++) {
+      if (position > height*0.8*i & position < height*1.6*i){
+        window.scrollTo({
+          top: height*1.2*i,
+          left: 0,
+          behavior: 'smooth'
+        })
+      }
+    }
+
+
+
   }
 
   useEffect(() => {
@@ -104,19 +126,20 @@ export default function CV() {
       <div className={styles.text1}>
         <CVtext1/>
       </div>
-      <p></p>
       <div className={styles.text2}>
         <CVtext2/>
+      </div>
+      <div className={styles.text3}>
+        <CVtext3/>
       </div>
     </div>
     </motion.div>
     <div className={styles.tagsPosition}>
     <motion.div
       variants={tagsVariants}
+      animate={{x: backAnimated}}
       >
-    <motion.div className={backTags} animate={{
-      x: backAnimated
-  }}>
+    <motion.div className={backTags} >
       <div className={styles.supBackTags}>
         Повседневная практика показывает, что глубокий уровень погружения выявляет срочную потребность благоприятных перспектив.
       </div>
