@@ -42,6 +42,7 @@ export default function CV() {
   const [tagGatsby, setTagGatsby] = React.useState(styles.taggtsb0)
   const [tagNext, setTagNext] = React.useState(styles.tagnxt0)
   const [scrollCV, setScrollCV] = React.useState()
+  const testRef = useRef()
 
   const handleScroll = () => {
     let position = (window.pageYOffset);
@@ -118,18 +119,20 @@ export default function CV() {
   <motion.div initial="initial" animate="enter" exit="exit">
     <motion.div variants={textVariants}>
     <div className={backText}>
+
       <div className={styles.supBackText}>
         Наше дело не так однозначно, как может показаться: понимание сути ресурсосберегающих технологий способствует подготовке и реализации распределения внутренних резервов и ресурсов. Являясь всего лишь частью общей картины, активно развивающиеся страны третьего мира заблокированы в рамках своих собственных рациональных ограничений.
       </div>
     </div>
     <div className={text}>
+    {testRef.current.offsetTop}
       <div className={styles.text1}>
         <CVtext1/>
       </div>
       <div className={styles.text2}>
         <CVtext2/>
       </div>
-      <div className={styles.text3}>
+      <div className={styles.text3} ref = {testRef}>
         <CVtext3/>
       </div>
     </div>
