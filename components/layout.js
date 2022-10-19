@@ -57,7 +57,7 @@ export default function Layout(props) {
 			setButtonContext(styles.hideBackButton)
 			setBackMenu(styles.hideBackMenu)
 			setBackAnimated(500)
-      setSupportDisc1(styles.supdisc1)
+
     }
     else {
 			setSwitchCss(styles.switch0)
@@ -68,7 +68,7 @@ export default function Layout(props) {
 			setButtonContext(styles.backButton)
 			setBackMenu(styles.backMenu)
 			setBackAnimated(0)
-      setSupportDisc1(styles.supdisc11)
+
     }
   }
 
@@ -79,18 +79,14 @@ export default function Layout(props) {
       setMenuDisc1(styles.disc1)
 			setMenuDisc2(styles.disc2)
 			setMenuDisc3(styles.disc3)
-
-			setSupportDisc2(styles.supdisc2)
-			setSupportDisc3(styles.supdisc3)
+      setSupportDisc1(styles.supdisc1)
     }
     else {
 			setMenuDisc0(styles.menu00)
       setMenuDisc1(styles.disc11)
 			setMenuDisc2(styles.disc22)
 			setMenuDisc3(styles.disc33)
-
-			setSupportDisc1(styles.supdisc22)
-			setSupportDisc1(styles.supdisc33)
+      setSupportDisc1(styles.supdisc11)
     }
   }
 	const closeMenu = () =>{
@@ -125,7 +121,7 @@ export default function Layout(props) {
 		      contacts
 	      </a>
 			</Link>
-
+      <div className={supportDisc1}/>
 			<Link href="/CV">
 	      <a className={menuDisc1}>
 		      CV

@@ -102,16 +102,7 @@ export default function CV() {
     else{
       setTagNext(styles.tagnxt0)
     }
-    var textList = [text1Ref, text2Ref, text3Ref]
-    for (var i = 0; i < 3; i++) {
-      if (position > textList[i-1].current-300 & position < textList[i-1].current+300){
-        window.scrollTo({
-          top: textList[i-1].current,
-          left: 0,
-          behavior: 'smooth'
-        })
-      }
-    }
+    
 
 
 

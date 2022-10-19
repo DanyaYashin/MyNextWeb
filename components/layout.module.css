@@ -63,8 +63,7 @@
 	z-index: 3;
 	width: 160px;
 	height: 160px;
-	border-radius: 30%;
-	border: 1px double black;
+	border-radius: 50%;
 	padding-left: 5px;
 	padding-top: 115px;
 	transform: rotate(-35deg);
@@ -72,39 +71,39 @@
 	background-color: white;
 	font-size: 30px;
 	overflow: hidden;
-	box-shadow: 2px 2px 3px #663399,-2px 2px 3px #663399,2px -2px 3px #663399,-2px -2px 3px #663399;
 }
 .supdisc1{
-	top: 70vh;
-	left: 70vw;
-	z-index: 3;
+	top: 10px;
+	left: 10px;
+	text-align: center;
 	position: fixed;
+	z-index: 3;
 	width: 80px;
 	height: 80px;
 	border-radius: 30%;
-	background-color: black;
+	overflow: hidden;
 	transition: 0.5s;
+	border: 1px double black;
+	font-size: 5px;
+	background-color: white;
 }
 .supdisc11{
-	top: 70vh;
-	left: 70vw;
-	z-index: 3;
+	top: -30px;
+	left: -30px;
+	text-align: center;
 	position: fixed;
-	width: 60px;
-	height: 60px;
-	border-radius: 40%;
-	background-color: black;
-	transition: 0.5s;
-}
-.supdisc1:hover{
-	transform: rotate(-395deg);
-	background-color: #C71585;
-	transition: 0.5s;
-}
-.supdisc11:hover{
-	transform: rotate(-395deg);
-	background-color: #C71585;
-	transition: 0.5s;
+	z-index: 3;
+	width: 160px;
+	height: 160px;
+	border-radius: 30%;
+	border: 1px double black;
+	padding-left: 5px;
+	padding-top: 115px;
+	transform: rotate(-35deg);
+	transition: 1s;
+	font-size: 30px;
+	overflow: hidden;
+	box-shadow: 2px 2px 3px #663399,-2px 2px 3px #663399,2px -2px 3px #663399,-2px -2px 3px #663399;
 }
 .disc11:hover{
 	padding-top: 112px;
@@ -112,6 +111,11 @@
 	transition: 0.5s;
 	transform: rotate(-395deg);
 	color: #C71585;
+}
+.disc11:hover >.supdisc11{
+	transform: rotate(-395deg);
+	background-color: #C71585;
+	transition: 0.5s;
 }
 
 
