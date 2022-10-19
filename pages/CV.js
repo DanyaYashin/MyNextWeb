@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import  CVtext1 from '../components/CVtext'
 import  CVtext2 from '../components/CVtext2'
 import  CVtext3 from '../components/CVtext3'
-import { TextContext, BackTextContext, BackTagsContext, BackAnimatedContext } from '../components/layout.js'
+import { TextContext, BackTextContext, BackTagsContext, BackAnimatedContext, BackAnimated } from '../components/layout.js'
 
 
 let easingText = [0.16, 1, 0.3, 1];
@@ -19,6 +19,15 @@ const textVariants = {
     transition: {duration: 1.9, ease: easingText }
   }
 };
+const backTextVariants = {
+  initial: { y: -300, opacity: 0, transition: { duration: 1, ease: easingText } },
+  exit: { y: -300, opacity: 0, transition: { duration: 1, ease: easingText } },
+  enter: {
+    y: 0,
+    opacity: 1,
+    transition: {duration: 1.9, ease: easingText }
+  }
+};
 const tagsVariants = {
   initial: { x: 100, opacity: 0, transition: { duration: 0.6, ease: easingTags } },
   exit: { x: 300, opacity: 0, transition: { duration: 0.6, ease: easingTags } },
@@ -29,11 +38,13 @@ const tagsVariants = {
   }
 };
 
+
 export default function CV() {
   const text = React.useContext(TextContext)
   const backText = React.useContext(BackTextContext)
   const backTags = React.useContext(BackTagsContext)
   const backAnimated = React.useContext(BackAnimatedContext)
+  const backAnimated2 = React.useContext(BackAnimated)
   const [tagPython, setTagPython] = React.useState(styles.tagpy0)
   const [tagDjango, setTagDjango] = React.useState(styles.tagdjng0)
   const [tagJS, setTagJS] = React.useState(styles.tagjs0)
@@ -42,7 +53,9 @@ export default function CV() {
   const [tagGatsby, setTagGatsby] = React.useState(styles.taggtsb0)
   const [tagNext, setTagNext] = React.useState(styles.tagnxt0)
   const [scrollCV, setScrollCV] = React.useState()
-  const testRef = useRef()
+  const text1Ref = useRef(null)
+  const text2Ref = useRef(null)
+  const text3Ref = useRef(null)
 
   const handleScroll = () => {
     let position = (window.pageYOffset);
@@ -89,17 +102,11 @@ export default function CV() {
     else{
       setTagNext(styles.tagnxt0)
     }
-    if (position < height*0.7){
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-      })
-    }
+    var textList = [text1Ref, text2Ref, text3Ref]
     for (var i = 0; i < 3; i++) {
-      if (position > height*0.8*i & position < height*1.6*i){
+      if (position > textList[i-1].current-300 & position < textList[i-1].current+300){
         window.scrollTo({
-          top: height*1.2*i,
+          top: textList[i-1].current,
           left: 0,
           behavior: 'smooth'
         })
@@ -109,6 +116,13 @@ export default function CV() {
 
 
   }
+  const handleClick = (ref) => {
+    window.scrollTo({
+      top: ref.offsetTop,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -117,22 +131,25 @@ export default function CV() {
   return(
 
   <motion.div initial="initial" animate="enter" exit="exit">
-    <motion.div variants={textVariants}>
-    <div className={backText}>
+  <motion.div className={backText} variants={backTextVariants} animate={{
+    y: -backAnimated2
+  }}>
+
 
       <div className={styles.supBackText}>
-        Наше дело не так однозначно, как может показаться: понимание сути ресурсосберегающих технологий способствует подготовке и реализации распределения внутренних резервов и ресурсов. Являясь всего лишь частью общей картины, активно развивающиеся страны третьего мира заблокированы в рамках своих собственных рациональных ограничений.
+        Наше дело не так однозначно, как может показаться: понимание сути ресурсосберегающих технологий способствует подготовке и реализации распределения внутренних резервов и ресурсов. Являясь всего лишь частью общей картины, активно развивающиеся страны третьего мира
       </div>
-    </div>
+
+    </motion.div>
+    <motion.div variants={textVariants}>
     <div className={text}>
-    {testRef.current.offsetTop}
-      <div className={styles.text1}>
+      <div className={styles.text1} ref = {text1Ref}>
         <CVtext1/>
       </div>
-      <div className={styles.text2}>
+      <div className={styles.text2} ref = {text2Ref}>
         <CVtext2/>
       </div>
-      <div className={styles.text3} ref = {testRef}>
+      <div className={styles.text3} ref = {text3Ref}>
         <CVtext3/>
       </div>
     </div>
@@ -140,7 +157,7 @@ export default function CV() {
     <div className={styles.tagsPosition}>
     <motion.div
       variants={tagsVariants}
-      animate={{x: backAnimated}}
+      animate={{x: backAnimated2}}
       >
     <motion.div className={backTags} >
       <div className={styles.supBackTags}>
@@ -160,6 +177,7 @@ export default function CV() {
     </div>
     </motion.div>
     </div>
+    <motion.div className={styles.emptyBlock} variants={tagsVariants} animate={{y: backAnimated2}}/>
   </motion.div>
 
   );

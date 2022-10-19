@@ -22,6 +22,7 @@ export const TextContext = React.createContext(null)
 export const BackTextContext = React.createContext(null)
 export const BackTagsContext = React.createContext(null)
 export const BackAnimatedContext = React.createContext(null)
+export const BackAnimated = React.createContext(null)
 export default function Layout(props) {
 
 	const [menuActive, setMenuActive] = React.useState(false)
@@ -56,6 +57,7 @@ export default function Layout(props) {
 			setButtonContext(styles.hideBackButton)
 			setBackMenu(styles.hideBackMenu)
 			setBackAnimated(500)
+      setSupportDisc1(styles.supdisc1)
     }
     else {
 			setSwitchCss(styles.switch0)
@@ -66,6 +68,7 @@ export default function Layout(props) {
 			setButtonContext(styles.backButton)
 			setBackMenu(styles.backMenu)
 			setBackAnimated(0)
+      setSupportDisc1(styles.supdisc11)
     }
   }
 
@@ -76,7 +79,7 @@ export default function Layout(props) {
       setMenuDisc1(styles.disc1)
 			setMenuDisc2(styles.disc2)
 			setMenuDisc3(styles.disc3)
-			setSupportDisc1(styles.supdisc1)
+
 			setSupportDisc2(styles.supdisc2)
 			setSupportDisc3(styles.supdisc3)
     }
@@ -85,7 +88,7 @@ export default function Layout(props) {
       setMenuDisc1(styles.disc11)
 			setMenuDisc2(styles.disc22)
 			setMenuDisc3(styles.disc33)
-			setSupportDisc1(styles.supdisc11)
+
 			setSupportDisc1(styles.supdisc22)
 			setSupportDisc1(styles.supdisc33)
     }
@@ -98,7 +101,9 @@ export default function Layout(props) {
  }
 
   return (
+
 		<motion.div initial="initial" animate="enter" exit="exit">
+    <div className={supportDisc1}/>
 		<motion.div className={backMenu} animate={{
 			y: -backAnimated
 		}}>
@@ -106,6 +111,7 @@ export default function Layout(props) {
 				Безусловно, сплочённость команды профессионалов требует от нас анализа поставленных обществом задач.
 			</div>
 		</motion.div>
+
 		<div className={styles.allDiscMenu}>
 			<div className={supportDisc3}/>
 			<Link href="/gallery">
@@ -119,7 +125,7 @@ export default function Layout(props) {
 		      contacts
 	      </a>
 			</Link>
-			<div className={supportDisc1}/>
+
 			<Link href="/CV">
 	      <a className={menuDisc1}>
 		      CV
@@ -136,6 +142,7 @@ export default function Layout(props) {
 			<a className={backSwitchCss} onClick={switchClick}/>
 			<a className={switchCss} onClick={switchClick}/>
 		</div>
+    <BackAnimated.Provider value={backAnimated}>
 		<TextContext.Provider value={allTextCss}>
 		<BackTextContext.Provider value={backTextCss}>
 		<BackTagsContext.Provider value={backTagsCss}>
@@ -147,6 +154,7 @@ export default function Layout(props) {
 		</BackTagsContext.Provider>
 		</BackTextContext.Provider>
 		</TextContext.Provider>
+    </BackAnimated.Provider>
 		</motion.div>
   );
 }

@@ -74,6 +74,38 @@
 	overflow: hidden;
 	box-shadow: 2px 2px 3px #663399,-2px 2px 3px #663399,2px -2px 3px #663399,-2px -2px 3px #663399;
 }
+.supdisc1{
+	top: 70vh;
+	left: 70vw;
+	z-index: 3;
+	position: fixed;
+	width: 80px;
+	height: 80px;
+	border-radius: 30%;
+	background-color: black;
+	transition: 0.5s;
+}
+.supdisc11{
+	top: 70vh;
+	left: 70vw;
+	z-index: 3;
+	position: fixed;
+	width: 60px;
+	height: 60px;
+	border-radius: 40%;
+	background-color: black;
+	transition: 0.5s;
+}
+.supdisc1:hover{
+	transform: rotate(-395deg);
+	background-color: #C71585;
+	transition: 0.5s;
+}
+.supdisc11:hover{
+	transform: rotate(-395deg);
+	background-color: #C71585;
+	transition: 0.5s;
+}
 .disc11:hover{
 	padding-top: 112px;
 	text-shadow: 2px 2px 4px #003066;

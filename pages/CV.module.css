@@ -196,9 +196,10 @@
   position: fixed;
   width: 40vw;
   left: 25vw;
-  transition: 0.3s;
+  transition: 0.1s;
   background-color: rgba(0, 125, 215, 0.5);
   height: 100vh;
+  overflow: hidden;
 }
 .hideBackText{
   z-index: -1;
@@ -206,7 +207,8 @@
   position: fixed;
   width: 40vw;
   left: 25vw;
-  transition: 0.3s;
+  margin-top: -400px;
+  transition: 0.1s;
   opacity: 0;
   height: 100vh;
 }
@@ -218,4 +220,21 @@
   padding-right: 5vw;
   overflow: hidden;
   transition: 0.3s;
+}
+
+.emptyBlock{
+  z-index: 1;
+  position: fixed;
+  background-color: rgba(50, 125, 215, 0.9);
+  width:600px;
+  height: 57vh;
+  left: 66vw;
+  margin-top: 59vh;
+  transition: 0.3s;
+  font-family: 'Roboto Mono', monospace;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 15vh;
+  overflow: hidden;
+  transition: 0.1s;
 }
