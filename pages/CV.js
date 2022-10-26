@@ -39,6 +39,9 @@ const tagsVariants = {
   }
 };
 
+const delay = ms => new Promise(
+  resolve => setTimeout(resolve, ms)
+);
 
 export default function CV() {
   const text = React.useContext(TextContext)
@@ -58,7 +61,7 @@ export default function CV() {
   const text2Ref = useRef(null)
   const text3Ref = useRef(null)
 
-  const handleScroll = () => {
+  const handleScroll = async () => {
     let position = (window.pageYOffset);
     let height = (window.innerHeight);
     if (position > 200){
@@ -104,6 +107,7 @@ export default function CV() {
       setTagNext(styles.tagnxt0)
     }
 
+    await delay(500);
 
 
   }
