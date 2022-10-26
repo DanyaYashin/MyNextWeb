@@ -207,7 +207,7 @@
   position: fixed;
   width: 40vw;
   left: 25vw;
-  margin-top: -400px;
+  margin-top: -1000px;
   transition: 0.1s;
   opacity: 0;
   height: 100vh;
@@ -215,7 +215,7 @@
 .supBackText{
   position: fixed;
   width: 40vw;
-  margin-top: 15vh;
+  padding-top: 15vh;
   padding-left: 5vw;
   padding-right: 5vw;
   overflow: hidden;

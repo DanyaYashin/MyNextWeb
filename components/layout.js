@@ -43,7 +43,7 @@ export default function Layout(props) {
 	const [backTagsCss, setBackTagsCss] = React.useState(cvStyles.hideBackTags)
 	const [buttonContext, setButtonContext] = React.useState(styles.hideBackButton)
 	const [backMenu, setBackMenu] = React.useState(styles.hideBackMenu)
-	const [backAnimated, setBackAnimated] = React.useState(300)
+	const [backAnimated, setBackAnimated] = React.useState(700)
 
 
 	const switchClick = () => {
@@ -56,7 +56,7 @@ export default function Layout(props) {
 			setBackTagsCss(cvStyles.hideBackTags)
 			setButtonContext(styles.hideBackButton)
 			setBackMenu(styles.hideBackMenu)
-			setBackAnimated(500)
+			setBackAnimated(700)
 
     }
     else {

@@ -112,7 +112,7 @@
 	transform: rotate(-395deg);
 	color: #C71585;
 }
-.disc11:hover >.supdisc11{
+.disc11:hover ~.supdisc11{
 	transform: rotate(-395deg);
 	background-color: #C71585;
 	transition: 0.5s;

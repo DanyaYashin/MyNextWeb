@@ -5,6 +5,7 @@ import  CVtext1 from '../components/CVtext'
 import  CVtext2 from '../components/CVtext2'
 import  CVtext3 from '../components/CVtext3'
 import { TextContext, BackTextContext, BackTagsContext, BackAnimatedContext, BackAnimated } from '../components/layout.js'
+import Link from 'next/link';
 
 
 let easingText = [0.16, 1, 0.3, 1];
@@ -102,7 +103,6 @@ export default function CV() {
     else{
       setTagNext(styles.tagnxt0)
     }
-    
 
 
 
@@ -134,13 +134,13 @@ export default function CV() {
     </motion.div>
     <motion.div variants={textVariants}>
     <div className={text}>
-      <div className={styles.text1} ref = {text1Ref}>
+      <div className={styles.text1} ref = {text1Ref} onClick={() => {handleClick(text3Ref.current);}}>
         <CVtext1/>
       </div>
       <div className={styles.text2} ref = {text2Ref}>
         <CVtext2/>
       </div>
-      <div className={styles.text3} ref = {text3Ref}>
+      <div className={styles.text3} ref = {text3Ref} onClick={() => {handleClick(text1Ref.current);}}>
         <CVtext3/>
       </div>
     </div>
