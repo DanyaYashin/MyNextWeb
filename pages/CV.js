@@ -61,6 +61,15 @@ export default function CV() {
   const text2Ref = useRef(null)
   const text3Ref = useRef(null)
 
+  const getRefOffset = (ref) =>{
+    try{
+      return ref.current.offsetTop
+    }
+    catch(error){
+      return 0
+    }
+  }
+
   const handleScroll = async () => {
     let position = (window.pageYOffset);
     let height = (window.innerHeight);
@@ -108,7 +117,7 @@ export default function CV() {
     }
 
     await delay(150);
-    var textList = [text1Ref.current.offsetTop, text2Ref.current.offsetTop, text3Ref.current.offsetTop]
+    var textList = [getRefOffset(text1Ref), getRefOffset(text2Ref), getRefOffset(text3Ref)]
     for (var i = 0; i < 4; i++) {
       if (position > textList[i-1]-400 & position < textList[i-1]+400){
         window.scrollTo({
@@ -140,6 +149,7 @@ export default function CV() {
     </motion.div>
     <motion.div variants={textVariants}>
     <div className={text}>
+    <p>{getRefOffset(text1Ref)}</p>
       <div className={styles.text1} ref = {text1Ref}>
         <CVtext1/>
       </div>
