@@ -68,9 +68,15 @@
 	padding-top: 115px;
 	transform: rotate(-35deg);
 	transition: 1s;
-	background-color: white;
 	font-size: 30px;
 	overflow: hidden;
+}
+.disc11:hover{
+	padding-top: 112px;
+	text-shadow: 2px 2px 4px #003066;
+	transition: 0.5s;
+	transform: rotate(-395deg);
+	color: #C71585;
 }
 .supdisc1{
 	top: 10px;
@@ -105,17 +111,23 @@
 	overflow: hidden;
 	box-shadow: 2px 2px 3px #663399,-2px 2px 3px #663399,2px -2px 3px #663399,-2px -2px 3px #663399;
 }
-.disc11:hover{
-	padding-top: 112px;
-	text-shadow: 2px 2px 4px #003066;
-	transition: 0.5s;
+.supdisc11hover{
+	top: -30px;
+	left: -30px;
+	text-align: center;
+	position: fixed;
+	z-index: 3;
+	width: 160px;
+	height: 160px;
+	border-radius: 30%;
+	border: 1px double black;
+	padding-left: 5px;
+	padding-top: 115px;
 	transform: rotate(-395deg);
-	color: #C71585;
-}
-.disc11:hover ~.supdisc11{
-	transform: rotate(-395deg);
-	background-color: #C71585;
 	transition: 0.5s;
+	font-size: 30px;
+	overflow: hidden;
+	box-shadow: 2px 2px 3px #663399,-2px 2px 3px #663399,2px -2px 3px #663399,-2px -2px 3px #663399;
 }
 
 
@@ -143,16 +155,13 @@
 	z-index: 3;
 	width: 280px;
 	height: 280px;
-	border-radius: 35%;
-	border: 1px double black;
+	border-radius: 50%;
 	padding-left: 5px;
 	padding-top: 220px;
 	transform: rotate(-35deg);
-	transition: 1.25s;
-	background-color: white;
+	transition: 1s;
 	font-size: 30px;
 	overflow: hidden;
-	box-shadow: 2px 2px 3px #663399,-2px 2px 3px #663399,2px -2px 3px #663399,-2px -2px 3px #663399;
 }
 .disc22:hover{
 	padding-top: 217px;
@@ -160,6 +169,60 @@
 	transition: 0.5s;
 	transform: rotate(-395deg);
 	color: #C71585;
+}
+.supdisc2{
+	top: 10px;
+	left: 10px;
+	text-align: center;
+	position: fixed;
+	z-index: 3;
+	width: 80px;
+	height: 80px;
+	border-radius: 30%;
+	overflow: hidden;
+	transition: 0.7s;
+	border: 1px double black;
+	font-size: 5px;
+	background-color: white;
+
+}
+.supdisc22{
+	top: -90px;
+	left: -90px;
+	text-align: center;
+	position: fixed;
+	z-index: 3;
+	width: 280px;
+	height: 280px;
+	border-radius: 35%;
+	border: 1px double black;
+	padding-left: 5px;
+	padding-top: 220px;
+	transform: rotate(-35deg);
+	transition: 1s;
+	background-color: white;
+	font-size: 30px;
+	overflow: hidden;
+	box-shadow: 2px 2px 3px #663399,-2px 2px 3px #663399,2px -2px 3px #663399,-2px -2px 3px #663399;
+}
+.supdisc22hover{
+	top: -90px;
+	left: -90px;
+	text-align: center;
+	position: fixed;
+	z-index: 3;
+	width: 280px;
+	height: 280px;
+	border-radius: 35%;
+	border: 1px double black;
+	padding-left: 5px;
+	padding-top: 220px;
+	transform: rotate(-395deg);
+	transition: 0.5s;
+	background-color: white;
+	font-size: 30px;
+	overflow: hidden;
+	box-shadow: 2px 2px 3px #663399,-2px 2px 3px #663399,2px -2px 3px #663399,-2px -2px 3px #663399;
 }
 
 
@@ -186,16 +249,14 @@
 	z-index: 3;
 	width: 400px;
 	height: 400px;
-	border-radius: 40%;
-	border: 1px double black;
+	border-radius: 50%;
 	padding-left: 5px;
 	padding-top: 335px;
 	transform: rotate(-35deg);
-	transition: 1.5s;
-	background-color: white;
+	transition: 1s;
 	font-size: 30px;
 	overflow: hidden;
-	box-shadow: 2px 2px 3px #663399,-2px 2px 3px #663399,2px -2px 3px #663399,-2px -2px 3px #663399;
+
 }
 .disc33:hover{
 	padding-top: 332px;
@@ -204,6 +265,60 @@
 	transform: rotate(-395deg);
 	color: #C71585;
 }
+.supdisc3{
+	top: 10px;
+	left: 10px;
+	text-align: center;
+	position: fixed;
+	z-index: 3;
+	width: 80px;
+	height: 80px;
+	border-radius: 30%;
+	overflow: hidden;
+	transition: 0.9s;
+	border: 1px double black;
+	font-size: 5px;
+	background-color: white;
+}
+.supdisc33{
+	top: -150px;
+	left: -150px;
+	text-align: center;
+	position: fixed;
+	z-index: 3;
+	width: 400px;
+	height: 400px;
+	border-radius: 40%;
+	border: 1px double black;
+	padding-left: 5px;
+	padding-top: 335px;
+	transform: rotate(-35deg);
+	transition: 1s;
+	background-color: white;
+	font-size: 30px;
+	overflow: hidden;
+	box-shadow: 2px 2px 3px #663399,-2px 2px 3px #663399,2px -2px 3px #663399,-2px -2px 3px #663399;
+}
+.supdisc33hover{
+	top: -150px;
+	left: -150px;
+	text-align: center;
+	position: fixed;
+	z-index: 3;
+	width: 400px;
+	height: 400px;
+	border-radius: 40%;
+	border: 1px double black;
+	padding-left: 5px;
+	padding-top: 335px;
+	transform: rotate(-395deg);
+	transition: 0.5s;
+	background-color: white;
+	font-size: 30px;
+	overflow: hidden;
+	box-shadow: 2px 2px 3px #663399,-2px 2px 3px #663399,2px -2px 3px #663399,-2px -2px 3px #663399;
+}
+
 .backMenu{
 	position: fixed;
 	z-index: 2;

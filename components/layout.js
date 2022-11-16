@@ -46,6 +46,9 @@ export default function Layout(props) {
 	const [backAnimated, setBackAnimated] = React.useState(700)
 
 
+
+
+
 	const switchClick = () => {
 		setSwitchActive(!switchActive);
     if (switchActive){
@@ -80,6 +83,8 @@ export default function Layout(props) {
 			setMenuDisc2(styles.disc2)
 			setMenuDisc3(styles.disc3)
       setSupportDisc1(styles.supdisc1)
+      setSupportDisc2(styles.supdisc2)
+      setSupportDisc3(styles.supdisc3)
     }
     else {
 			setMenuDisc0(styles.menu00)
@@ -87,6 +92,8 @@ export default function Layout(props) {
 			setMenuDisc2(styles.disc22)
 			setMenuDisc3(styles.disc33)
       setSupportDisc1(styles.supdisc11)
+      setSupportDisc2(styles.supdisc22)
+      setSupportDisc3(styles.supdisc33)
     }
   }
 	const closeMenu = () =>{
@@ -94,6 +101,25 @@ export default function Layout(props) {
 	 setMenuDisc1(styles.disc1)
 	 setMenuDisc2(styles.disc2)
 	 setMenuDisc3(styles.disc3)
+ }
+
+ const menuAnimationOver1 = () =>{
+  setSupportDisc1(styles.supdisc11hover)
+ }
+ const menuAnimationOver2 = () =>{
+  setSupportDisc2(styles.supdisc22hover)
+ }
+ const menuAnimationOver3 = () =>{
+  setSupportDisc3(styles.supdisc33hover)
+ }
+ const menuAnimationOut1 = () =>{
+  setSupportDisc1(styles.supdisc11)
+ }
+ const menuAnimationOut2 = () =>{
+  setSupportDisc2(styles.supdisc22)
+ }
+ const menuAnimationOut3 = () =>{
+  setSupportDisc3(styles.supdisc33)
  }
 
   return (
@@ -111,19 +137,19 @@ export default function Layout(props) {
 		<div className={styles.allDiscMenu}>
 			<div className={supportDisc3}/>
 			<Link href="/gallery">
-	    	<a className={menuDisc3}>
+	    	<a className={menuDisc3} onMouseOver={menuAnimationOver3} onMouseOut={menuAnimationOut3}>
 		    	gallery
         </a>
 			</Link>
 			<div className={supportDisc2}/>
 			<Link href="/">
-	      <a className={menuDisc2}>
+	      <a className={menuDisc2} onMouseOver={menuAnimationOver2} onMouseOut={menuAnimationOut2}>
 		      contacts
 	      </a>
 			</Link>
       <div className={supportDisc1}/>
 			<Link href="/CV">
-	      <a className={menuDisc1}>
+	      <a className={menuDisc1} onMouseOver={menuAnimationOver1} onMouseOut={menuAnimationOut1}>
 		      CV
 	      </a>
 			</Link>

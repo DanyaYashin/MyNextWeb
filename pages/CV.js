@@ -107,17 +107,19 @@ export default function CV() {
       setTagNext(styles.tagnxt0)
     }
 
-    await delay(500);
-
+    await delay(150);
+    var textList = [text1Ref.current.offsetTop, text2Ref.current.offsetTop, text3Ref.current.offsetTop]
+    for (var i = 0; i < 4; i++) {
+      if (position > textList[i-1]-400 & position < textList[i-1]+400){
+        window.scrollTo({
+          top: textList[i-1]-100,
+          left: 0,
+          behavior: 'smooth'
+        })
+      }
+    }
 
   }
-  const handleClick = (ref) => {
-    window.scrollTo({
-      top: ref.offsetTop,
-      left: 0,
-      behavior: "smooth",
-    });
-  };
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -138,13 +140,13 @@ export default function CV() {
     </motion.div>
     <motion.div variants={textVariants}>
     <div className={text}>
-      <div className={styles.text1} ref = {text1Ref} onClick={() => {handleClick(text3Ref.current);}}>
+      <div className={styles.text1} ref = {text1Ref}>
         <CVtext1/>
       </div>
       <div className={styles.text2} ref = {text2Ref}>
         <CVtext2/>
       </div>
-      <div className={styles.text3} ref = {text3Ref} onClick={() => {handleClick(text1Ref.current);}}>
+      <div className={styles.text3} ref = {text3Ref}>
         <CVtext3/>
       </div>
     </div>
