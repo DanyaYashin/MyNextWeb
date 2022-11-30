@@ -101,7 +101,11 @@ export default function Layout(props) {
 	 setMenuDisc1(styles.disc1)
 	 setMenuDisc2(styles.disc2)
 	 setMenuDisc3(styles.disc3)
+
  }
+
+ const [switchAnimation, setSwitchAnimation] = React.useState(0)
+
 
  const menuAnimationOver1 = () =>{
   setSupportDisc1(styles.supdisc11hover)
@@ -121,6 +125,14 @@ export default function Layout(props) {
  const menuAnimationOut3 = () =>{
   setSupportDisc3(styles.supdisc33)
  }
+
+const transitionStartAnimated = () =>{
+  setSwitchAnimation(1)
+}
+const transitionEndAnimated = () =>{
+  setSwitchAnimation(0)
+}
+
 
   return (
 
@@ -149,11 +161,14 @@ export default function Layout(props) {
 			</Link>
       <div className={supportDisc1}/>
 			<Link href="/CV">
-	      <a className={menuDisc1} onMouseOver={menuAnimationOver1} onMouseOut={menuAnimationOut1}>
+	      <a className={menuDisc1} onMouseOver={menuAnimationOver1} onMouseOut={menuAnimationOut1}
+        >
 		      CV
 	      </a>
 			</Link>
-	    <a className={menuDisc0} onClick={toggleMenu}/>
+      <div onTransitionStart={transitionStartAnimated} onTransitionEnd={transitionEndAnimated}>
+	    <a className={menuDisc0} onClick={toggleMenu} >{switchAnimation}</a>
+      </div>
 		</div>
 		<motion.div className={buttonContext} animate={{
 			y: backAnimated

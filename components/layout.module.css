@@ -141,7 +141,7 @@
 	height: 80px;
 	border-radius: 30%;
 	overflow: hidden;
-	transition: 0.7s;
+	transition: 0.5s;
 	border: 1px double black;
 	font-size: 5px;
 	background-color: white;
@@ -180,7 +180,7 @@
 	height: 80px;
 	border-radius: 30%;
 	overflow: hidden;
-	transition: 0.7s;
+	transition: 0.5s;
 	border: 1px double black;
 	font-size: 5px;
 	background-color: white;
@@ -236,7 +236,7 @@
 	height: 80px;
 	border-radius: 30%;
 	overflow: hidden;
-	transition: 0.9s;
+	transition: 0.5s;
 	border: 1px double black;
 	font-size: 5px;
 	background-color: white;
@@ -275,7 +275,7 @@
 	height: 80px;
 	border-radius: 30%;
 	overflow: hidden;
-	transition: 0.9s;
+	transition: 0.5s;
 	border: 1px double black;
 	font-size: 5px;
 	background-color: white;
