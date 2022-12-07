@@ -57,6 +57,7 @@ export default function CV() {
   const [tagGatsby, setTagGatsby] = React.useState(styles.taggtsb0)
   const [tagNext, setTagNext] = React.useState(styles.tagnxt0)
   const [scrollCV, setScrollCV] = React.useState()
+  const [text2Opacity, setT2Opacity] = React.useState(0)
   const text1Ref = useRef(null)
   const text2Ref = useRef(null)
   const text3Ref = useRef(null)
@@ -118,6 +119,9 @@ export default function CV() {
 
     await delay(150);
     var textList = [getRefOffset(text1Ref), getRefOffset(text2Ref), getRefOffset(text3Ref)]
+    if (position > textList[1]-200){
+      setT2Opacity(1)
+    }
     for (var i = 0; i < 4; i++) {
       if (position > textList[i-1]-400 & position < textList[i-1]+400){
         window.scrollTo({
@@ -127,7 +131,7 @@ export default function CV() {
         })
       }
       else {
-        
+
       }
     }
 
@@ -155,7 +159,7 @@ export default function CV() {
       <div className={styles.text1} ref = {text1Ref}>
         <CVtext1/>
       </div>
-      <div className={styles.text2} ref = {text2Ref}>
+      <div className={styles.text2} ref = {text2Ref} style={{ opacity: text2Opacity }}>
         <CVtext2/>
       </div>
       <div className={styles.text3} ref = {text3Ref}>
