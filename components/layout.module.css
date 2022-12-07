@@ -380,6 +380,18 @@
 	box-shadow: 2px 2px 3px #663399,-2px 2px 3px #663399,2px -2px 3px #663399,-2px -2px 3px #663399;
 }
 
+/* Одеяло для меню */
+.blanket{
+	z-index: 5;
+	position: fixed;
+	width: 300px;
+	height: 300px;
+	margin-top: -60vh;
+	background-color: rgba(200, 125, 315, 0.3);
+}
+
+
+
 /* Блок позади меню (switch on) */
 .backMenu{
 	position: fixed;
