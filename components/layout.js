@@ -74,18 +74,18 @@ export default function Layout(props) {
 
     }
   }
-  const [blanket, setBlanket] = React.useState()
+  const [blanket, setBlanket] = React.useState('-60vh')
   const [switchAnimation, setSwitchAnimation] = React.useState()
   const ref = React.useRef();
   React.useEffect(() => {
       ref.current.addEventListener("transitionstart", () => {
         setSwitchAnimation(1)
-        setBlanket('-60vh')
+        setBlanket('0')
       });
    }, []);
  const transitionEndAnimated = () =>{
    setSwitchAnimation(0)
-   setBlanket('0')
+   setBlanket('-60vh')
 
  }
 
@@ -146,7 +146,7 @@ export default function Layout(props) {
   return (
 
 		<motion.div initial="initial" animate="enter" exit="exit">
-    <div className={styles.blanket} styles={{marginTop: blanket}}/>
+    <div className={styles.blanket} style={{marginTop: blanket}}/>
     <div className={supportDisc1}/>
 		<motion.div className={backMenu} animate={{
 			y: -backAnimated
