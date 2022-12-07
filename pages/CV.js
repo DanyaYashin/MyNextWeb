@@ -126,6 +126,9 @@ export default function CV() {
           behavior: 'smooth'
         })
       }
+      else {
+        
+      }
     }
 
   }
@@ -149,7 +152,6 @@ export default function CV() {
     </motion.div>
     <motion.div variants={textVariants}>
     <div className={text}>
-    <p>{getRefOffset(text1Ref)}</p>
       <div className={styles.text1} ref = {text1Ref}>
         <CVtext1/>
       </div>

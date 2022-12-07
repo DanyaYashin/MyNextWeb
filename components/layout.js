@@ -74,6 +74,22 @@ export default function Layout(props) {
 
     }
   }
+  const ref = React.useRef();
+  React.useEffect(() => {
+      ref.current.addEventListener("transitionstart", () => {
+        setSwitchAnimation(1)
+        setSupportDisc1(styles.supdisc11TransitionStart)
+        setSupportDisc2(styles.supdisc22TransitionStart)
+        setSupportDisc3(styles.supdisc33TransitionStart)
+      });
+   }, []);
+ const transitionEndAnimated = () =>{
+   setSwitchAnimation(0)
+   setSupportDisc1(styles.supdisc11hover)
+   setSupportDisc2(styles.supdisc22hover)
+   setSupportDisc3(styles.supdisc33hover)
+ }
+
 
 	const toggleMenu = () => {
     setMenuActive(!menuActive);
@@ -104,7 +120,7 @@ export default function Layout(props) {
 
  }
 
- const [switchAnimation, setSwitchAnimation] = React.useState(0)
+ const [switchAnimation, setSwitchAnimation] = React.useState()
 
 
  const menuAnimationOver1 = () =>{
@@ -126,12 +142,6 @@ export default function Layout(props) {
   setSupportDisc3(styles.supdisc33)
  }
 
-const transitionStartAnimated = () =>{
-  setSwitchAnimation(1)
-}
-const transitionEndAnimated = () =>{
-  setSwitchAnimation(0)
-}
 
 
   return (
@@ -161,14 +171,14 @@ const transitionEndAnimated = () =>{
 			</Link>
       <div className={supportDisc1}/>
 			<Link href="/CV">
-	      <a className={menuDisc1} onMouseOver={menuAnimationOver1} onMouseOut={menuAnimationOut1}
-        >
+	      <a className={menuDisc1} onMouseOver={menuAnimationOver1} onMouseOut={menuAnimationOut1}>
 		      CV
 	      </a>
 			</Link>
-      <div onTransitionStart={transitionStartAnimated} onTransitionEnd={transitionEndAnimated}>
-	    <a className={menuDisc0} onClick={toggleMenu} >{switchAnimation}</a>
-      </div>
+	    <a className={menuDisc0} onClick={toggleMenu} ref={ref}
+       onTransitionEnd={transitionEndAnimated}>
+       {switchAnimation}
+      </a>
 		</div>
 		<motion.div className={buttonContext} animate={{
 			y: backAnimated
