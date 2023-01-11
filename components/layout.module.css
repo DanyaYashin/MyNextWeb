@@ -382,7 +382,7 @@
 
 /* Одеяло для меню */
 .blanket{
-	z-index: 5;
+	z-index: 4;
 	position: fixed;
 	width: 300px;
 	height: 300px;

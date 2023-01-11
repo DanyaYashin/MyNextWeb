@@ -1,244 +1,274 @@
 /* Теги в правой стороне страницы  */
-.Alltags{
+.Alltags {}
 
-
-}
-.alltags{
-  z-index: -1;
-  position: fixed;
-  border: 1px double #BA55D3;
-  width:200px;
-  height: 200px;
-  top: 100px;
-  margin-left: 50px;
+.alltags {
+	z-index: -1;
+	position: fixed;
+	border: 1px double #BA55D3;
+	width: 200px;
+	height: 200px;
+	top: 100px;
+	margin-left: 50px;
 }
 
-.tagpy{
-  color: #BA55D3;
-  font-size: 22px;
-  position: absolute;
-  padding-left: 55px;
-  padding-top: 26px;
-  transition: 0.5s;
+.tagpy {
+	color: #BA55D3;
+	font-size: 22px;
+	position: absolute;
+	padding-left: 55px;
+	padding-top: 26px;
+	transition: 0.5s;
 }
-.tagpy0{
-  color: #BA55D3;
-  font-size: 22px;
-  position: absolute;
-  padding-left: 45px;
-  padding-top: 26px;
-  opacity: 0;
+
+.tagpy0 {
+	color: #BA55D3;
+	font-size: 22px;
+	position: absolute;
+	padding-left: 45px;
+	padding-top: 26px;
+	opacity: 0;
 }
-.tagdjng{
-  font-size: 20px;
-  position: absolute;
-  writing-mode: vertical-rl;
-  padding-left: 80px;
-  padding-top: 55px;
-  transition: 0.5s;
+
+.tagdjng {
+	font-size: 20px;
+	position: absolute;
+	writing-mode: vertical-rl;
+	padding-left: 80px;
+	padding-top: 55px;
+	transition: 0.5s;
 }
-.tagdjng0{
-  font-size: 20px;
-  position: absolute;
-  writing-mode: vertical-rl;
-  padding-left: 80px;
-  padding-top: 65px;
-  opacity: 0;
+
+.tagdjng0 {
+	font-size: 20px;
+	position: absolute;
+	writing-mode: vertical-rl;
+	padding-left: 80px;
+	padding-top: 65px;
+	opacity: 0;
 }
-.tagjs{
-  color: #800080;
-  font-size: 30px;
-  position: absolute;
-  padding-left: 100px;
-  padding-top: 42px;
-  transition: 0.5s;
+
+.tagjs {
+	color: #800080;
+	font-size: 30px;
+	position: absolute;
+	padding-left: 100px;
+	padding-top: 42px;
+	transition: 0.5s;
 }
-.tagjs0{
-  color: #800080;
-  font-size: 30px;
-  position: absolute;
-  padding-left: 110px;
-  padding-top: 42px;
-  opacity: 0;
+
+.tagjs0 {
+	color: #800080;
+	font-size: 30px;
+	position: absolute;
+	padding-left: 110px;
+	padding-top: 42px;
+	opacity: 0;
 }
-.tagrct{
-  color: #DDA0DD;
-  position: absolute;
-  writing-mode: vertical-lr;
-  padding-left: 93px;
-  padding-top: 80px;
-  transition: 0.5s;
+
+.tagrct {
+	color: #DDA0DD;
+	position: absolute;
+	writing-mode: vertical-lr;
+	padding-left: 93px;
+	padding-top: 80px;
+	transition: 0.5s;
 }
-.tagrct0{
-  color: #DDA0DD;
-  position: absolute;
-  writing-mode: vertical-lr;
-  padding-left: 93px;
-  padding-top: 90px;
-  opacity: 0;
+
+.tagrct0 {
+	color: #DDA0DD;
+	position: absolute;
+	writing-mode: vertical-lr;
+	padding-left: 93px;
+	padding-top: 90px;
+	opacity: 0;
 }
-.tagknv{
-  color: #7B68EE;
-  position: absolute;
-  padding-left: 35px;
-  padding-top: 45px;
-  transition: 0.5s;
+
+.tagknv {
+	color: #7B68EE;
+	position: absolute;
+	padding-left: 35px;
+	padding-top: 45px;
+	transition: 0.5s;
 }
-.tagknv0{
-  color: #7B68EE;
-  position: absolute;
-  padding-left: 25px;
-  padding-top: 45px;
-  opacity: 0;
+
+.tagknv0 {
+	color: #7B68EE;
+	position: absolute;
+	padding-left: 25px;
+	padding-top: 45px;
+	opacity: 0;
 }
-.taggtsb{
-  color: #FF00FF;
-  font-size: 22px;
-  position: absolute;
-  padding-left: 20px;
-  padding-top: 58px;
-  transition: 0.5s;
+
+.taggtsb {
+	color: #FF00FF;
+	font-size: 22px;
+	position: absolute;
+	padding-left: 20px;
+	padding-top: 58px;
+	transition: 0.5s;
 }
-.taggtsb0{
-  color: #FF00FF;
-  font-size: 22px;
-  position: absolute;
-  padding-left: 20px;
-  padding-top: 68px;
-  opacity: 0;
+
+.taggtsb0 {
+	color: #FF00FF;
+	font-size: 22px;
+	position: absolute;
+	padding-left: 20px;
+	padding-top: 68px;
+	opacity: 0;
 }
-.tagnxt{
-  color: #663399;
-  font-size: 20px;
-  position: absolute;
-  padding-left: 37px;
-  padding-top: 78px;
-  transition: 0.5s;
+
+.tagnxt {
+	color: #663399;
+	font-size: 20px;
+	position: absolute;
+	padding-left: 37px;
+	padding-top: 78px;
+	transition: 0.5s;
 }
-.tagnxt0{
-  color: #663399;
-  font-size: 20px;
-  position: absolute;
-  padding-left: 27px;
-  padding-top: 88px;
-  opacity: 0;
+
+.tagnxt0 {
+	color: #663399;
+	font-size: 20px;
+	position: absolute;
+	padding-left: 27px;
+	padding-top: 88px;
+	opacity: 0;
 }
+
 /* Блок позади тэгов (switch on) */
-.backTags{
-  z-index: 1;
-  position: fixed;
-  background-color: rgba(0, 225, 215, 0.9);
-  width:600px;
-  height: 57vh;
-  transition: 0.3s;
-  font-family: 'Roboto Mono', monospace;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 15vh;
-  overflow: hidden;
+.backTags {
+	z-index: 1;
+	position: fixed;
+	background-color: rgba(0, 225, 215, 0.9);
+	width: 600px;
+	height: 57vh;
+	transition: 0.3s;
+	font-family: 'Roboto Mono', monospace;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 15vh;
+	overflow: hidden;
 }
-.hideBackTags{
-  z-index: -1;
-  position: fixed;
-  background-color: rgba(0, 225, 215, 0.9);
-  width: 600px;
-  height: 57vh;
-  opacity: 0;
-  transition: 0.3s;
-  font-family: 'Roboto Mono', monospace;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 15vh;
-  overflow: hidden;
+
+.hideBackTags {
+	z-index: -1;
+	position: fixed;
+	background-color: rgba(0, 225, 215, 0.9);
+	width: 600px;
+	height: 57vh;
+	opacity: 0;
+	transition: 0.3s;
+	font-family: 'Roboto Mono', monospace;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 15vh;
+	overflow: hidden;
 }
-.tagsPosition{
-  position: fixed;
-  left: 66vw;
+
+.tagsPosition {
+	position: fixed;
+	left: 66vw;
 }
-.supBackTags{
-  width: 30vw;
-  overflow: hidden;
+
+.supBackTags {
+	width: 30vw;
+	overflow: hidden;
 }
 
 
 /* Текст оп центру странцы */
-.allText{
-  z-index: 1;
-  font-family: 'Cormorant SC', serif;
-  position: absolute;
-  width: 40vw;
-  left: 25vw;
-  transition: 0.3s;
-  margin-top: 50px;
-  display: table-column;
-  height: 220vh;
-}
-.backAllText{
-  z-index: -1;
-  font-family: 'Cormorant SC', serif;
-  position: absolute;
-  width: 40vw;
-  left: 25vw;
-  transition: 0.3s;
-  margin-top: 50px;
-  opacity: 0.1;
-  height: 220vh;
-}
-.text1, .text2, .text3{
-  width: 35vw;
-  height: 100vh;
-  margin-top: 150px;
-  margin-left: auto;
-  margin-right: auto;
-  transition: 0.3s;
+.allText {
+	z-index: 1;
+	font-family: 'Cormorant SC', serif;
+	position: absolute;
+	width: 40vw;
+	left: 25vw;
+	transition: 0.3s;
+	margin-top: 100px;
+	display: table-column;
 }
 
-.backText{
-  z-index: 1;
-  font-family: 'Roboto Mono', monospace;
-  position: fixed;
-  width: 40vw;
-  left: 25vw;
-  transition: 0.1s;
-  background-color: rgba(0, 125, 215, 0.5);
-  height: 100vh;
-  overflow: hidden;
+.backAllText {
+	z-index: -1;
+	font-family: 'Cormorant SC', serif;
+	position: absolute;
+	width: 40vw;
+	left: 25vw;
+	transition: 0.3s;
+	margin-top: 100px;
+	opacity: 0.1;
+	height: 220vh;
 }
-.hideBackText{
-  z-index: -1;
-  font-family: 'Roboto Mono', monospace;
-  position: fixed;
-  width: 40vw;
-  left: 25vw;
-  margin-top: -1000px;
-  transition: 0.1s;
-  opacity: 0;
-  height: 100vh;
+
+.text1,
+.text2,
+.text3,
+.text4,
+.text5,
+.text6 {
+	width: 35vw;
+	margin-top: 150px;
+	margin-bottom: 50vh;
+	margin-left: auto;
+	margin-right: auto;
+	transition: 1.8s;
 }
-.supBackText{
-  position: fixed;
-  width: 40vw;
-  padding-top: 15vh;
-  padding-left: 5vw;
-  padding-right: 5vw;
-  overflow: hidden;
-  transition: 0.3s;
+
+.backText {
+	z-index: 1;
+	font-family: 'Roboto Mono', monospace;
+	position: fixed;
+	width: 40vw;
+	left: 25vw;
+	transition: 0.1s;
+	background-color: rgba(0, 125, 215, 0.5);
+	height: 100vh;
+	overflow: hidden;
 }
+
+.hideBackText {
+	z-index: -1;
+	font-family: 'Roboto Mono', monospace;
+	position: fixed;
+	width: 40vw;
+	left: 25vw;
+	margin-top: -1000px;
+	transition: 0.1s;
+	opacity: 0;
+	height: 100vh;
+}
+
+.supBackText {
+	position: fixed;
+	width: 40vw;
+	padding-top: 25vh;
+	padding-left: 5vw;
+	padding-right: 5vw;
+	overflow: hidden;
+	transition: 0.3s;
+}
+
 
 /* Блок в правом нижнем углу (switch on) */
-.emptyBlock{
-  z-index: 1;
-  position: fixed;
-  background-color: rgba(50, 125, 215, 0.9);
-  width:600px;
-  height: 57vh;
-  left: 66vw;
-  margin-top: 59vh;
-  transition: 0.3s;
-  font-family: 'Roboto Mono', monospace;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 15vh;
-  overflow: hidden;
-  transition: 0.1s;
+.emptyBlock {
+	z-index: 1;
+	position: fixed;
+	background-color: rgba(50, 125, 215, 0.9);
+	width: 600px;
+	height: 57vh;
+	left: 66vw;
+	margin-top: 59vh;
+	transition: 0.3s;
+	font-family: 'Roboto Mono', monospace;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 15vh;
+	overflow: hidden;
+	transition: 0.1s;
+}
+
+.emptyText {
+	margin-top: -10vh;
+	width: 30vw;
+	height: 50vh;
 }

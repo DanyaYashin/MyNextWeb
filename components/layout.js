@@ -8,13 +8,13 @@ import cvStyles from '../pages/CV.module.css';
 let easingSwitch = [0.16, 1, 0.3, 1];
 
 const switchVariants = {
-  initial: { y: 100, opacity: 0, transition: { duration: 0.6, ease: easingSwitch } },
-  exit: { y: 300, opacity: 0, transition: { duration: 0.6, ease: easingSwitch } },
-  enter: {
-    x: 0,
-    opacity: 1,
-    transition: {delay: 0.1, duration: 0.9, ease: easingSwitch }
-  }
+	initial: { y: 100, opacity: 0, transition: { duration: 0.6, ease: easingSwitch } },
+	exit: { y: 300, opacity: 0, transition: { duration: 0.6, ease: easingSwitch } },
+	enter: {
+		x: 0,
+		opacity: 1,
+		transition: { delay: 0.1, duration: 0.9, ease: easingSwitch }
+	}
 };
 
 
@@ -51,7 +51,7 @@ export default function Layout(props) {
 
 	const switchClick = () => {
 		setSwitchActive(!switchActive);
-    if (switchActive){
+		if (switchActive) {
 			setSwitchCss(styles.switch)
 			setBackSwitchCss(styles.backSwitch)
 			setAllTextCss(cvStyles.allText)
@@ -61,8 +61,8 @@ export default function Layout(props) {
 			setBackMenu(styles.hideBackMenu)
 			setBackAnimated(700)
 
-    }
-    else {
+		}
+		else {
 			setSwitchCss(styles.switch0)
 			setBackSwitchCss(styles.backSwitch0)
 			setAllTextCss(cvStyles.backAllText)
@@ -72,136 +72,132 @@ export default function Layout(props) {
 			setBackMenu(styles.backMenu)
 			setBackAnimated(0)
 
-    }
-  }
-  const [blanket, setBlanket] = React.useState('-60vh')
-  const [switchAnimation, setSwitchAnimation] = React.useState()
-  const ref = React.useRef();
-  React.useEffect(() => {
-      ref.current.addEventListener("transitionstart", () => {
-        setSwitchAnimation(1)
-        setBlanket('0')
-      });
-   }, []);
- const transitionEndAnimated = () =>{
-   setSwitchAnimation(0)
-   setBlanket('-60vh')
+		}
+	}
+	const [blanket, setBlanket] = React.useState('-60vh')
+	const ref = React.useRef();
+	React.useEffect(() => {
+		ref.current.addEventListener("transitionstart", () => {
+			setBlanket('0')
+		});
+	}, []);
+	const transitionEndAnimated = () => {
+		setBlanket('-60vh')
 
- }
-
+	}
 
 	const toggleMenu = () => {
-    setMenuActive(!menuActive);
-    if (menuActive){
+		setMenuActive(!menuActive);
+		if (menuActive) {
 			setMenuDisc0(styles.menu)
-      setMenuDisc1(styles.disc1)
+			setMenuDisc1(styles.disc1)
 			setMenuDisc2(styles.disc2)
 			setMenuDisc3(styles.disc3)
-      setSupportDisc1(styles.supdisc1)
-      setSupportDisc2(styles.supdisc2)
-      setSupportDisc3(styles.supdisc3)
-    }
-    else {
+			setSupportDisc1(styles.supdisc1)
+			setSupportDisc2(styles.supdisc2)
+			setSupportDisc3(styles.supdisc3)
+		}
+		else {
 			setMenuDisc0(styles.menu00)
-      setMenuDisc1(styles.disc11)
+			setMenuDisc1(styles.disc11)
 			setMenuDisc2(styles.disc22)
 			setMenuDisc3(styles.disc33)
-      setSupportDisc1(styles.supdisc11)
-      setSupportDisc2(styles.supdisc22)
-      setSupportDisc3(styles.supdisc33)
-    }
-  }
-	const closeMenu = () =>{
-	 setMenuDisc0(styles.menu)
-	 setMenuDisc1(styles.disc1)
-	 setMenuDisc2(styles.disc2)
-	 setMenuDisc3(styles.disc3)
+			setSupportDisc1(styles.supdisc11)
+			setSupportDisc2(styles.supdisc22)
+			setSupportDisc3(styles.supdisc33)
+		}
+	}
+	const closeMenu = () => {
+		setMenuDisc0(styles.menu)
+		setMenuDisc1(styles.disc1)
+		setMenuDisc2(styles.disc2)
+		setMenuDisc3(styles.disc3)
 
- }
-
-
-
-
- const menuAnimationOver1 = () =>{
-  setSupportDisc1(styles.supdisc11hover)
- }
- const menuAnimationOver2 = () =>{
-  setSupportDisc2(styles.supdisc22hover)
- }
- const menuAnimationOver3 = () =>{
-  setSupportDisc3(styles.supdisc33hover)
- }
- const menuAnimationOut1 = () =>{
-  setSupportDisc1(styles.supdisc11)
- }
- const menuAnimationOut2 = () =>{
-  setSupportDisc2(styles.supdisc22)
- }
- const menuAnimationOut3 = () =>{
-  setSupportDisc3(styles.supdisc33)
- }
+	}
 
 
 
-  return (
+
+	const menuAnimationOver1 = () => {
+		setSupportDisc1(styles.supdisc11hover)
+	}
+	const menuAnimationOver2 = () => {
+		setSupportDisc2(styles.supdisc22hover)
+	}
+	const menuAnimationOver3 = () => {
+		setSupportDisc3(styles.supdisc33hover)
+	}
+	const menuAnimationOut1 = () => {
+		setSupportDisc1(styles.supdisc11)
+	}
+	const menuAnimationOut2 = () => {
+		setSupportDisc2(styles.supdisc22)
+	}
+	const menuAnimationOut3 = () => {
+		setSupportDisc3(styles.supdisc33)
+	}
+
+
+
+	return (
 
 		<motion.div initial="initial" animate="enter" exit="exit">
-    <div className={styles.blanket} style={{marginTop: blanket}}/>
-    <div className={supportDisc1}/>
-		<motion.div className={backMenu} animate={{
-			y: -backAnimated
-		}}>
-			<div className={styles.supBackMenu}>
-				Безусловно, сплочённость команды профессионалов требует от нас анализа поставленных обществом задач.
-			</div>
-		</motion.div>
 
-		<div className={styles.allDiscMenu}>
-			<div className={supportDisc3}/>
-			<Link href="/gallery">
-	    	<a className={menuDisc3} onMouseOver={menuAnimationOver3} onMouseOut={menuAnimationOut3}>
-		    	gallery
-        </a>
-			</Link>
-			<div className={supportDisc2}/>
-			<Link href="/">
-	      <a className={menuDisc2} onMouseOver={menuAnimationOver2} onMouseOut={menuAnimationOut2}>
-		      contacts
-	      </a>
-			</Link>
-      <div className={supportDisc1}/>
-			<Link href="/CV">
-	      <a className={menuDisc1} onMouseOver={menuAnimationOver1} onMouseOut={menuAnimationOut1}>
-		      CV
-	      </a>
-			</Link>
-	    <a className={menuDisc0} onClick={toggleMenu} ref={ref}
-       onTransitionEnd={transitionEndAnimated}>
-       {switchAnimation}
-      </a>
-		</div>
-		<motion.div className={buttonContext} animate={{
-			y: backAnimated
-		}}>
-			И нет сомнений, что представители современных социальных резервов призваны к ответу.
+			<div className={supportDisc1} />
+			<motion.div className={backMenu} animate={{
+				y: -backAnimated
+			}}>
+				<div className={styles.supBackMenu}>
+					Ссылки в круговом меню созданы при помощи Next Link. А анимация открытия с использованием хуков React useState.
+				</div>
+			</motion.div>
+
+			<div className={styles.allDiscMenu}>
+				<div className={styles.blanket} style={{ marginTop: blanket }}/>
+				<div className={supportDisc3} />
+				<Link href="/gallery">
+					<a className={menuDisc3} onMouseOver={menuAnimationOver3} onMouseOut={menuAnimationOut3}>
+						gallery
+					</a>
+				</Link>
+				<div className={supportDisc2} />
+				<Link href="/">
+					<a className={menuDisc2} onMouseOver={menuAnimationOver2} onMouseOut={menuAnimationOut2}>
+						contacts
+					</a>
+				</Link>
+				<div className={supportDisc1} />
+				<Link href="/CV">
+					<a className={menuDisc1} onMouseOver={menuAnimationOver1} onMouseOut={menuAnimationOut1}>
+						CV
+					</a>
+				</Link>
+				<a className={menuDisc0} onClick={toggleMenu} ref={ref}
+					onTransitionEnd={transitionEndAnimated}>
+				</a>
+			</div>
+			<motion.div className={buttonContext} animate={{
+				y: backAnimated
+			}}>
+				Переключатель ниже также создан при помощи хуков. При этом для отображения даных коментариев на разных страницах используется React createContext.
+			</motion.div>
+			<div className={styles.switchButton}>
+				<a className={backSwitchCss} onClick={switchClick} />
+				<a className={switchCss} onClick={switchClick} />
+			</div>
+			<BackAnimated.Provider value={backAnimated}>
+				<TextContext.Provider value={allTextCss}>
+					<BackTextContext.Provider value={backTextCss}>
+						<BackTagsContext.Provider value={backTagsCss}>
+							<BackAnimatedContext.Provider value={backTagsCss}>
+								<div className={styles.children}>
+									{props.children}
+								</div>
+							</BackAnimatedContext.Provider>
+						</BackTagsContext.Provider>
+					</BackTextContext.Provider>
+				</TextContext.Provider>
+			</BackAnimated.Provider>
 		</motion.div>
-		<div className={styles.switchButton}>
-			<a className={backSwitchCss} onClick={switchClick}/>
-			<a className={switchCss} onClick={switchClick}/>
-		</div>
-    <BackAnimated.Provider value={backAnimated}>
-		<TextContext.Provider value={allTextCss}>
-		<BackTextContext.Provider value={backTextCss}>
-		<BackTagsContext.Provider value={backTagsCss}>
-		<BackAnimatedContext.Provider value={backTagsCss}>
-		<div className={styles.children}>
-			{props.children}
-    </div>
-		</BackAnimatedContext.Provider>
-		</BackTagsContext.Provider>
-		</BackTextContext.Provider>
-		</TextContext.Provider>
-    </BackAnimated.Provider>
-		</motion.div>
-  );
+	);
 }
